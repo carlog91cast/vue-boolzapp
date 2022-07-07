@@ -28,7 +28,7 @@
                     <!-- barra delle funzioni e userpic -->
                     <div class="header-sx">
                         <div class="header-user justify-content-start">
-                            <img :src="'img/' + user.avatar + '.jpg'">
+                            <img src="./img/avatar_io.jpg">
                             <p>{{user.name}}</p>
                         </div>
                         <div class="header-function justify-content-end">
@@ -37,8 +37,14 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div class="notice-bar">
-                        
+                    <div class="notice">
+                        <div class="notice-bar">
+                            <i class="fa-solid fa-bell-slash"></i>
+                            <div class="text-notice">
+                                Ricevi notifiche di nuovi messaggi
+                            </div>
+                        </div>
+                        <a href="">Attiva notifiche desktop</a>
                     </div>
                 </div>
                 <!-- colonna chat destra -->

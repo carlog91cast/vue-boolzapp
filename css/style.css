@@ -93,3 +93,31 @@ main {
     height: 25px;
     width: 25px;
 }
+
+/* area notifiche */
+.notice {
+    height: 80px;
+    padding: 13px;
+    background-color: #8EDAFC;
+
+}
+
+.notice-bar {
+    display: flex;
+    align-items: center;
+}
+
+.notice-bar i {
+    margin-right: 16px;
+    margin-top: 3px;
+    color: #8EB2BE;
+}
+
+.text-notice {
+    color: black;
+}
+
+.notice a {
+    color: grey;
+    margin-left: 35px;
+}
