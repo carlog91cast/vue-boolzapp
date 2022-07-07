@@ -165,7 +165,7 @@ main {
 .contact-list-box {
     width: 100%;
     overflow-y: auto;
-    height: 56%;
+    height: 70%;
 }
 
 .single-contact {
@@ -265,7 +265,41 @@ main {
     flex-grow: 1;
     overflow-y: auto;
 }
+/* messaggi della chat */
+.msg-container{
+    width: fit-content;
+    padding: 1rem;
+    max-width: 50%;
+    border-radius: 1rem;
+    margin: 1rem 4rem;
+}
+
+.msg-container:first-child{
+    margin-top: 3rem;
+}
+
+.msg-container.received-msg{
+    align-self: flex-end;
+    background-color:  #ffffff;
+}
+
+.msg-container.sent-msg{
+    align-self: flex-start;
+    background-color: #caecb1;
+}
+
+.msg-box{
+    position: relative;
+}
+
+.sending-time p{
+    font-size: 0.6rem;
+    position: absolute;
+    right: 0;
+    color: gray;
+}
 /* imput message bar */
+
 .send-message{
     width: 100%;
     display: flex;
@@ -274,9 +308,10 @@ main {
     background-color: #f3eeea;
  }
 
-.send-message .input-text{
+.input-text{
     width: 80%;
     height: 2.5rem;
+    
 }
 
 .input-text input{
@@ -284,6 +319,7 @@ main {
     width: 100%;
     border: none;
     outline: none;
+    border-radius: 10px;
 }
 
 .send-message .reactions, .mic-open{
