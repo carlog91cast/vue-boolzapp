@@ -43,7 +43,7 @@ header {
 /* columns container*/
 main {
     background-color: white;
-    height: 95%;
+    height: 100%;
     width: 80%;
     display: flex;
     position: absolute;
@@ -165,7 +165,7 @@ main {
 .contact-list-box {
     width: 100%;
     overflow-y: auto;
-    height: 100%;
+    height: 56%;
 }
 
 .single-contact {
@@ -207,22 +207,33 @@ main {
     justify-content: space-between;
 }
 
-.header-user-dx {
+.header-user-pic-dx {
     display: flex;
     align-items: center;
     height: 40px;
     width: 40px;
 }
 
-.header-user-dx img {
+.header-user-pic-dx img {
     width: 100%;
     height: 100%;
     border-radius: 50px;
 }
 
-.header-user-dx p {
+.user-text-dx h4 {
     font-size: 16px;
-    margin-left: 16px;
+    margin-bottom: 0;
+    
+    
+}
+.user-text-dx {
+    text-align: start;
+    margin-top: 17px;
+    margin-right: 400px;
+}
+.user-text-dx p {
+    font-size: 12px;
+    color: gray;
 }
 
 /* col dx icone */
