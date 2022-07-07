@@ -121,3 +121,16 @@ main {
     color: grey;
     margin-left: 35px;
 }
+/* search bar */
+.chats-search{
+    height: 49px;
+    background-color: #131c21;
+    border-bottom: 1px solid #252d32;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-button i{
+    color: gray;
+}
