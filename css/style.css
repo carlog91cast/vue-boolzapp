@@ -261,8 +261,38 @@ main {
     background-image: url(../img/mine.jpg);
     display: flex;
     flex-direction: column;
-    height: calc(100% - 60px);
+    height: calc(100% - 116px);
     flex-grow: 1;
     overflow-y: auto;
-    margin-bottom: 4rem;
+}
+/* imput message bar */
+.send-message{
+    width: 100%;
+    display: flex;
+    align-items: center;;
+    padding: 0.5rem 0;
+    background-color: #f3eeea;
+ }
+
+.send-message .input-text{
+    width: 80%;
+    height: 2.5rem;
+}
+
+.input-text input{
+    height: 2.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.send-message .reactions, .mic-open{
+    text-align: center;
+    width: 10%;
+    cursor: pointer;
+    color: #6a7376;
+}
+
+.send-message i{
+    font-size: 1.5rem;
 }
