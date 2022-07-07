@@ -25,6 +25,11 @@ i {
 }
 
 /* MAIN */
+header {
+    width: 100%;
+    height: calc(100vh - 85vh);
+    background-color: #419788;
+}
 
 #wrapper {
     background-color: #dbdbd2;
@@ -34,9 +39,12 @@ i {
     align-items: center;
     justify-content: center;
 }
-main{
+
+main {
     background-color: rgb(128, 113, 113);
     height: 95%;
     width: 80%;
     display: flex;
-  }
+    position: absolute;
+    top: 5%;
+}
