@@ -42,7 +42,7 @@ header {
 
 /* columns container*/
 main {
-    background-color: rgb(128, 113, 113);
+    background-color: white;
     height: 95%;
     width: 80%;
     display: flex;
@@ -108,25 +108,32 @@ main {
 }
 
 .notice-bar i {
-    margin-right: 16px;
-    margin-top: 3px;
     color: #8EB2BE;
+}
+
+.bell-circle {
+    padding: 0.8rem;
+    color: #8edafb;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 1rem;
 }
 
 .text-notice {
     color: black;
+    margin-bottom: -10px;
 }
 
 .notice a {
     color: grey;
-    margin-left: 35px;
+    margin-left: 60px;
+
 }
 
 /* search bar */
 .chats-search {
     height: 49px;
     background-color: #EAEAEA;
-    border-bottom: 1px solid #252d32;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,4 +171,36 @@ main {
 .search-button i {
     color: gray;
 }
+
 /* chats bar */
+
+.contact-list-box {
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.single-contact {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.single-contact.active {
+    background-color: #f0f0f0;
+}
+
+.contact-image {
+    width: 50px;
+}
+
+.contact-image img {
+    border-radius: 50%;
+}
+
+.contact-text {
+    margin-left: 1rem;
+}
