@@ -121,16 +121,47 @@ main {
     color: grey;
     margin-left: 35px;
 }
-/* search bar */
-.chats-search{
-    height: 49px;
-    background-color: #131c21;
-    border-bottom: 1px solid #252d32;
 
+/* search bar */
+.chats-search {
+    height: 49px;
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #252d32;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.search-button i{
+
+.search-box {
+    background-color: white;
+    height: 35px;
+    width: 94%;
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    border: 0;
+    margin-left: 12px;
+    background-color: white;
+    color: #828689;
+    cursor: pointer;
+}
+
+.search-box input {
+    color: #d4d5d7;
+    font-weight: 500;
+    border: 0;
+    height: 30px;
+    font-size: 15px;
+    width: 70%;
+    margin-left: 30px;
+    font-size: 13px;
+
+}
+
+.search-button i {
     color: gray;
 }
+/* chats bar */
