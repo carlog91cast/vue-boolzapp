@@ -95,23 +95,16 @@ main {
 }
 
 /* area notifiche */
-.notice {
-    height: 80px;
-    padding: 13px;
-    background-color: #8EDAFC;
-
-}
-
-.notice-bar {
+.notice-container {
     display: flex;
     align-items: center;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    background-color: #8edafb;
 }
 
-.notice-bar i {
-    color: #8EB2BE;
-}
-
-.bell-circle {
+.bell-circle-container {
     padding: 0.8rem;
     color: #8edafb;
     background-color: white;
@@ -119,15 +112,10 @@ main {
     margin-right: 1rem;
 }
 
-.text-notice {
-    color: black;
-    margin-bottom: -10px;
-}
-
-.notice a {
-    color: grey;
-    margin-left: 60px;
-
+.notice-text a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: gray;
 }
 
 /* search bar */
@@ -203,4 +191,52 @@ main {
 
 .contact-text {
     margin-left: 1rem;
+}
+
+/* colonna chat dx */
+
+/* header dx */
+
+.header-dx {
+    height: 60px;
+    padding: 10px 16px;
+    color: black;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-user-dx {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+}
+
+.header-user-dx img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.header-user-dx p {
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+/* col dx icone */
+
+.header-function {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+}
+
+.header-function i {
+    color: #B1B1B1;
+    padding: 5px;
+    height: 25px;
+    width: 25px;
 }

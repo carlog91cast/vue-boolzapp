@@ -37,16 +37,17 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
-                    <div class="notice">
-                        <div class="notice-bar">
-                            <div class="bell-circle">
-                              <i class="fa-solid fa-bell-slash"></i>  
-                            </div>
-                            <div class="text-notice">
-                                Ricevi notifiche di nuovi messaggi
+                    <!-- notification bar -->
+                    <div class="notice-container">
+                        <div class="notice-image">
+                            <div class="bell-circle-container">
+                                <i class="fa-solid fa-bell-slash"></i>
                             </div>
                         </div>
-                        <a href="">Attiva notifiche desktop</a>
+                        <div class="notice-text">
+                            <h2>Ricevi notifiche di nuovi messaggi</h2>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
                     </div>
                     <!-- search bar -->
                     <div class="chats-search">
@@ -73,9 +74,22 @@
                     </div>
                 </div>
 
-
                 <!-- colonna chat destra -->
-                <div class="col-7"></div>
+
+                <div class="col-7">
+                    <div class="header-dx">
+                        <div class="header-user-dx justify-content-start">
+                            <img src="./img/avatar_io.jpg">
+                            <p>{{user.name}}</p>
+                            <div class="last-access">Ultimo accesso oggi alle</div>
+                        </div>
+                        <div class="header-function justify-content-end">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </div>
 
             </main>
         </div>
