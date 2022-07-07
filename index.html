@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
@@ -21,9 +24,25 @@
         <div id="wrapper">
             <main>
                 <!-- colonna chat sinistra -->
-                <div class="col-8"></div>
+                <div class="col-5">
+                    <!-- barra delle funzioni e userpic -->
+                    <div class="header-sx">
+                        <div class="header-user justify-content-start">
+                            <img :src="'img/' + user.avatar + '.jpg'">
+                            <p>{{user.name}}</p>
+                        </div>
+                        <div class="header-function justify-content-end">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <div class="notice-bar">
+                        
+                    </div>
+                </div>
                 <!-- colonna chat destra -->
-                <div class="col-4"></div>
+                <div class="col-7"></div>
 
             </main>
         </div>
