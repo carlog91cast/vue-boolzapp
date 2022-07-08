@@ -55,7 +55,7 @@
                             <button class="search-button">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input type="text" id="search-input" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model="searchFilter" @keyup="filterName()" type="text" id="search-input" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                     <!-- chats bar -->

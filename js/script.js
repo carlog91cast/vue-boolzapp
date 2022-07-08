@@ -4,6 +4,7 @@ let vue = new Vue(
         data: {
             clickedElement: 0,
             newMessage: "",
+            searchFilter: "",
             user: {
                 name: "Sofia",
                 avatar: "_io"
@@ -205,6 +206,19 @@ let vue = new Vue(
                 }
                     , 2000);
             },
-            
+
+            // milestone 4: creo una funzione con for each per ogni elemento dell'arrau che a
+            filterName() {
+                // per ogni elemento di contacts, se ha le stesse
+                // lettere, il contatto saraà visible altrimenti scompare
+                this.contacts.forEach(element => {
+                    if (element.name.toLowerCase().includes(this.searchFilter.toLowerCase())) {
+                        element.visible = true;
+                    }else{
+                        element.visible = false;
+                    }
+                    
+                });
+            }
         }
     })
