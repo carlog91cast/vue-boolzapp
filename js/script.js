@@ -185,6 +185,7 @@ let vue = new Vue(
                         }
                     );
                     this.setTime()
+                    this.scr
                     // svuoto la casella testo
                     this.newMessage = "";
                 }
@@ -193,7 +194,7 @@ let vue = new Vue(
             receivedNewMessage() {
                 this.contacts[this.clickedElement].messages.push(
                     {
-                        message: 'ok',
+                        message: 'smettila di alimentare le tue frustrazioni creando un intelligenza artificiale che interagisca con te, confezionando risposte adatte solo per trovar conforto per il tuo ego ferito',
                         status: 'received'
                     }
                 );
@@ -203,6 +204,7 @@ let vue = new Vue(
                     this.receivedNewMessage()
                 }
                     , 2000);
-            }
+            },
+            
         }
     })
