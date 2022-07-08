@@ -184,7 +184,7 @@ let vue = new Vue(
                             status: 'sent'
                         }
                     );
-                    this.setTime();
+                    this.setTime()
                     // svuoto la casella testo
                     this.newMessage = "";
                 }
@@ -199,9 +199,8 @@ let vue = new Vue(
                 );
             },
             setTime() {
-                setTimeout => {
-                    (this.receivedNewMessage(), 1000);
-                }
+                setTimeout(this.receivedNewMessage()
+                    , 1000);
             }
         }
     })
