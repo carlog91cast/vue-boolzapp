@@ -2,6 +2,7 @@ let vue = new Vue(
     {
         el: "#root",
         data: {
+            clickedElement: 0,
             user: {
                 name: "Sofia",
                 avatar: "_io"
@@ -68,7 +69,7 @@ let vue = new Vue(
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
+                            message: 'Sono ubriaco fradicio',
                             status: 'received'
                         }
                     ],
@@ -85,7 +86,7 @@ let vue = new Vue(
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Si, ma preferirei andare al cinema',
+                            message: 'lo sai che sono celiaca',
                             status: 'received'
                         }
                     ],
@@ -141,7 +142,7 @@ let vue = new Vue(
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                            message: 'no, mi sta antipatica',
                             status: 'received'
                         }
                     ],
@@ -158,16 +159,21 @@ let vue = new Vue(
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                            message: 'No!',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:51:00',
-                            message: 'OK!!',
+                            message: 'E invece si!!',
                             status: 'received'
                         }
                     ],
                 }
             ],
+        },
+        methods:{
+            setClickedElement(index){
+                this.clickedElement = index;
+            }
         }
     })
