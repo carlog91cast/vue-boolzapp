@@ -197,5 +197,9 @@ let vue = new Vue(
                     }
                 );
             },
+            setTime() {
+                setTimeout(this.receivedNewMessage()
+                    , 4000);
+            }
         }
     })
