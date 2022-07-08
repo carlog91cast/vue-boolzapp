@@ -199,8 +199,10 @@ let vue = new Vue(
                 );
             },
             setTime() {
-                setTimeout(this.receivedNewMessage()
-                    , 1000);
+                setTimeout(() => {
+                    this.receivedNewMessage()
+                }
+                    , 2000);
             }
         }
     })
