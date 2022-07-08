@@ -55,14 +55,16 @@
                             <button class="search-button">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input v-model="searchFilter" @keyup="filterName()" type="text" id="search-input" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model="searchFilter" @keyup="filterName()" type="text" id="searchFilter" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
                     <!-- chats bar -->
                     <div class="contact-list-box">
                         <div v-for="(singleContact, index) in contacts" class="contact-list">
                             <!-- quando clicco il contatto aggiungo la class active per evidenziare il contatto selezionato -->
-                            <div @click="setClickedElement(index)" :class="{'active': index === clickedElement}"
+                            <div @click="setClickedElement(index)"
+                                :class="{'active': index === clickedElement}"
+                                v-if="singleContact.visible === true" 
                                 class="single-contact">
                                 <div class="contact-image">
                                     <img :src="`img/avatar${singleContact.avatar}.jpg`"

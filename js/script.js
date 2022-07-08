@@ -212,10 +212,11 @@ let vue = new Vue(
                 // per ogni elemento di contacts, se ha le stesse
                 // lettere, il contatto saraà visible altrimenti scompare
                 this.contacts.forEach(element => {
-                    if (element.name.toLowerCase().includes(this.searchFilter.toLowerCase())) {
-                        element.visible = true;
-                    }else{
+                    if (!element.name.toLowerCase().includes(this.searchFilter.toLowerCase())) {
                         element.visible = false;
+                        console.log(element);
+                    }else{
+                        element.visible = true;
                     }
                     
                 });
