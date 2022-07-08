@@ -81,10 +81,10 @@
                 <div class="col-7">
                     <div class="header-dx">
                         <div class="header-user-pic-dx justify-content-start">
-                            <img :src="`img/avatar${clickedElement.avatar}.jpg`">
+                            <img :src="`img/avatar${contacts[clickedElement].avatar}.jpg`">
                         </div>
                         <div class="user-text-dx">
-                            <h4>{{user.name}}</h4>
+                            <h4>{{contacts[clickedElement].name}}</h4>
                             <p>Ultimo accesso oggi alle</p>
                         </div>
                         <div class="header-function justify-content-end">
