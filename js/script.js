@@ -3,6 +3,7 @@ let vue = new Vue(
         el: "#root",
         data: {
             clickedElement: 0,
+            newMessage: "",
             user: {
                 name: "Sofia",
                 avatar: "_io"
@@ -171,9 +172,30 @@ let vue = new Vue(
                 }
             ],
         },
-        methods:{
-            setClickedElement(index){
+        methods: {
+            setClickedElement(index) {
                 this.clickedElement = index;
-            }
+            },
+            sendNewMessage() {
+                if (this.newMessage.length > 0) {
+                    this.contacts[this.clickedElement].messages.push(
+                        {
+                            message: this.newMessage,
+                            status: 'sent'
+                        }
+                    );
+                    // svuoto la casella testo
+                    this.newMessage = "";
+                }
+
+            },
+            receivedNewMessage() {
+                this.contacts[this.clickedElement].messages.push(
+                    {
+                        message: 'ok',
+                        status: 'received'
+                    }
+                );
+            },
         }
     })
