@@ -235,7 +235,7 @@ main {
 }
 
 .user-text-dx p {
-    font-size: 12px;
+    font-size: 10px;
     color: gray;
 }
 
@@ -265,8 +265,9 @@ main {
     flex-grow: 1;
     overflow-y: auto;
 }
+
 /* messaggi della chat */
-.msg-container{
+.msg-container {
     width: fit-content;
     padding: 1rem;
     max-width: 50%;
@@ -274,47 +275,49 @@ main {
     margin: 1rem 3rem;
 }
 
-.msg-container:first-child{
+.msg-container:first-child {
     margin-top: 3rem;
 }
 
-.msg-container.received-msg{
+.msg-container.received-msg {
     align-self: flex-start;
-    background-color:  #ffffff;
+    background-color: #ffffff;
 }
 
-.msg-container.sent-msg{
+.msg-container.sent-msg {
     align-self: flex-end;
     background-color: #caecb1;
 }
 
-.msg-box{
+.msg-box {
     position: relative;
 }
 
-.sending-time p{
-    font-size: 0.6rem;
+.sending-time p {
+    font-size: 0.5rem;
     position: absolute;
     right: 0;
     color: gray;
 }
+
 /* imput message bar */
 
-.send-message{
+.send-message {
     width: 100%;
     display: flex;
-    align-items: center;;
+    align-items: center;
+    ;
     padding: 0.5rem 0;
     background-color: #f3eeea;
- }
-
-.input-text{
-    width: 80%;
-    height: 2.5rem;
-    
 }
 
-.input-text input{
+.input-text {
+    width: 80%;
+    height: 2.5rem;
+
+}
+
+.input-text input {
     height: 2.5rem;
     width: 100%;
     border: none;
@@ -322,13 +325,14 @@ main {
     border-radius: 10px;
 }
 
-.send-message .reactions, .mic-open{
+.send-message .reactions,
+.mic-open {
     text-align: center;
     width: 10%;
     cursor: pointer;
     color: #6a7376;
 }
 
-.send-message i{
+.send-message i {
     font-size: 1.5rem;
 }

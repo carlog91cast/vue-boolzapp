@@ -92,7 +92,7 @@
                         </div>
                         <div class="user-text-dx">
                             <h4>{{contacts[clickedElement].name}}</h4>
-                            <p>Ultimo accesso oggi alle</p>
+                            <p>Ultimo accesso oggi alle {{lastAccess}}</p>
                         </div>
                         <div class="header-function justify-content-end">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -109,9 +109,9 @@
                                 <div class="msg-text">
                                     {{singleMessage.message}}
                                 </div>
-                                <!-- <div class="sending-time">
+                                <div class="sending-time">
                                     <p>{{singleMessage.date}}</p>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>

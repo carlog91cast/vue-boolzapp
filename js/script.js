@@ -5,6 +5,7 @@ let vue = new Vue(
             clickedElement: 0,
             newMessage: "",
             searchFilter: "",
+            lastAccess: moment().format('HH:mm'),
             user: {
                 name: "Sofia",
                 avatar: "_io"
@@ -181,7 +182,7 @@ let vue = new Vue(
                 if (this.newMessage.length > 0) {
                     this.contacts[this.clickedElement].messages.push(
                         {
-                            date: moment().format('DD/MM/YYYY HH:mm:ss'),
+                            date: moment().format('HH:mm'),
                             message: this.newMessage,
                             status: 'sent'
                         }
@@ -190,7 +191,7 @@ let vue = new Vue(
                     // svuoto la casella testo
                     this.newMessage = "";
                     const element = document.getElementById("chat-window");
-                    element.scrollToBottom({behavior: "smooth", block: "end"});
+                    element.scrollIntoView({behavior: "smooth", block: "end"});
 
                 }
 
@@ -198,7 +199,7 @@ let vue = new Vue(
             receivedNewMessage() {
                 this.contacts[this.clickedElement].messages.push(
                     {
-                        date: moment().format('DD/MM/YYYY HH:mm:ss'),
+                        date: moment().format('HH:mm'),
                         message: 'smettila di alimentare le tue frustrazioni creando un intelligenza artificiale che interagisca con te, confezionando risposte adatte solo per trovar conforto per il tuo ego ferito',
                         status: 'received'
                     }
