@@ -234,11 +234,7 @@ let vue = new Vue(
                 this.showMenu = !this.showMenu;
                 this.dropMenu = index;
             },
-            // riclicco e la tendina scompare
-            dropDownOff(){
-                this.showMenu = false
-                this.dropMenu = 0;
-            },
+        
             // funzione che rimuove il messaggio
             deleteMessage(index){
                 this.contacts[this.clickedElement].messages.splice(index,1);
