@@ -6,6 +6,9 @@ let vue = new Vue(
             newMessage: "",
             searchFilter: "",
             lastAccess: moment().format('HH:mm'),
+            showMenu: false,
+            dropMenu: 0,
+
             user: {
                 name: "Sofia",
                 avatar: "_io"
@@ -226,5 +229,19 @@ let vue = new Vue(
 
                 });
             },
+            // al click sullo chevron mostro il drop-menu
+            dropDownOn(index){
+                this.showMenu = !this.showMenu;
+                this.dropMenu = index;
+            },
+            // riclicco e la tendina scompare
+            dropDownOff(){
+                this.showMenu = false
+                this.dropMenu = 0;
+            },
+            // funzione che rimuove il messaggio
+            deleteMessage(index){
+                this.contacts[this.clickedElement].messages.splice(index,1);
+            }
         }
     })
