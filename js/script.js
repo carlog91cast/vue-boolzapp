@@ -181,20 +181,24 @@ let vue = new Vue(
                 if (this.newMessage.length > 0) {
                     this.contacts[this.clickedElement].messages.push(
                         {
+                            date: moment().format('DD/MM/YYYY HH:mm:ss'),
                             message: this.newMessage,
                             status: 'sent'
                         }
                     );
                     this.setTime()
-                    this.scr
                     // svuoto la casella testo
                     this.newMessage = "";
+                    const element = document.getElementById("chat-window");
+                    element.scrollToBottom({behavior: "smooth", block: "end"});
+
                 }
 
             },
             receivedNewMessage() {
                 this.contacts[this.clickedElement].messages.push(
                     {
+                        date: moment().format('DD/MM/YYYY HH:mm:ss'),
                         message: 'smettila di alimentare le tue frustrazioni creando un intelligenza artificiale che interagisca con te, confezionando risposte adatte solo per trovar conforto per il tuo ego ferito',
                         status: 'received'
                     }
@@ -207,19 +211,19 @@ let vue = new Vue(
                     , 2000);
             },
 
-            // milestone 4: creo una funzione con for each per ogni elemento dell'arrau che a
+            // milestone 4: creo una funzione con for each per ogni elemento dell'arrau che ha le stesse lettere del nome ricercato
             filterName() {
                 // per ogni elemento di contacts, se ha le stesse
                 // lettere, il contatto saraà visible altrimenti scompare
                 this.contacts.forEach(element => {
-                    if (!element.name.toLowerCase().includes(this.searchFilter.toLowerCase())) {
-                        element.visible = false;
-                        console.log(element);
-                    }else{
+                    if (element.name.toLowerCase().includes(this.searchFilter.toLowerCase())) {
                         element.visible = true;
+                        console.log(element);
+                    } else {
+                        element.visible = false;
                     }
-                    
+
                 });
-            }
+            },
         }
     })
