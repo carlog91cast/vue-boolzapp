@@ -300,6 +300,19 @@ main {
     color: gray;
 }
 
+/* dropdown menu */
+.chevron {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    color: #6a7376;
+    display: none;
+}
+
+.msg-container:hover .chevron {
+    display: block;
+}
+
 /* imput message bar */
 
 .send-message {

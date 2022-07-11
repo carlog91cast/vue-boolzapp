@@ -67,10 +67,8 @@
                     <div class="contact-list-box">
                         <div v-for="(singleContact, index) in contacts" class="contact-list">
                             <!-- quando clicco il contatto aggiungo la class active per evidenziare il contatto selezionato -->
-                            <div @click="setClickedElement(index)" 
-                                :class="{'active': index === clickedElement}"
-                                v-if="singleContact.visible === true" 
-                                class="single-contact">
+                            <div @click="setClickedElement(index)" :class="{'active': index === clickedElement}"
+                                v-if="singleContact.visible === true" class="single-contact">
                                 <div class="contact-image">
                                     <img :src="`img/avatar${singleContact.avatar}.jpg`"
                                         :alt="`avatar di ${singleContact.name}` ">
@@ -105,17 +103,26 @@
                         <div v-for="(singleMessage, index) in contacts[clickedElement].messages"
                             :class="{'sent-msg': singleMessage.status == 'sent', 'received-msg': singleMessage.status == 'received'}"
                             class="msg-container">
-                            <div class="msg-box">
+                            <div class="msg-box dropdown">
+                                <div class="chevron dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
                                 <div class="msg-text">
                                     {{singleMessage.message}}
                                 </div>
                                 <div class="sending-time">
                                     <p>{{singleMessage.date}}</p>
                                 </div>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li class="dropdown-item">Message Info</li>
+                                    <li class="dropdown-item">Delete message</li>
+                                </ul>
                             </div>
+
                         </div>
                     </div>
-                    <!-- imput message bar -->
+                    <!-- input message bar -->
                     <div class="send-message d-flex justify-content-between">
                         <div class="reactions">
                             <i class="fa-regular fa-face-smile"></i>
