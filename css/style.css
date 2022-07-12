@@ -34,7 +34,7 @@ header {
 #wrapper {
     background-color: #dbdbd2;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +43,7 @@ header {
 /* columns container*/
 main {
     background-color: white;
-    height: 100%;
+    height: calc(100vh - 5vh - 5vh);
     width: 80%;
     display: flex;
     position: absolute;

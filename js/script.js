@@ -238,6 +238,6 @@ let vue = new Vue(
             // funzione che rimuove il messaggio
             deleteMessage(index){
                 this.contacts[this.clickedElement].messages.splice(index,1);
-            }
+            },
         }
     })

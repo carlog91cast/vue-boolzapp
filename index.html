@@ -113,9 +113,10 @@
                                 <div class="sending-time">
                                     <p>{{singleMessage.date}}</p>
                                 </div>
-                                <ul class="drop-menu" v-if="showMenu && dropMenu === index" :class="{'drop-menu': dropMenu === contacts[clickedElement].messages}">
+                                <ul class="drop-menu" v-if="showMenu && dropMenu === index"
+                                    :class="{'drop-menu': dropMenu === contacts[clickedElement].messages}">
                                     <li>Message info</li>
-                                    <li @click="deleteMessage(index), dropDownOff()">Delete message</li>
+                                    <li @click="deleteMessage(index)">Delete message</li>
                                 </ul>
                             </div>
 
@@ -123,18 +124,18 @@
                     </div>
                     <!-- input message bar -->
                     <div class=" send-message d-flex justify-content-between">
-                                    <div class="reactions">
-                                        <i class="fa-regular fa-face-smile"></i>
-                                    </div>
-                                    <div class="input-text">
-                                        <input v-model="newMessage" @keyup.enter="sendNewMessage()" type="text"
-                                            placeholder=" Scrivi un messaggio ">
-                                    </div>
-                                    <div class="mic-open">
-                                        <i class="fa-solid fa-microphone"></i>
-                                    </div>
-                            </div>
+                        <div class="reactions">
+                            <i class="fa-regular fa-face-smile"></i>
                         </div>
+                        <div class="input-text">
+                            <input v-model="newMessage" @keyup.enter="sendNewMessage()" type="text"
+                                placeholder=" Scrivi un messaggio ">
+                        </div>
+                        <div class="mic-open">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                    </div>
+                </div>
 
             </main>
         </div>
